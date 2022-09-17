@@ -1,0 +1,87 @@
+<div class="edit-shareholder">
+  <div class="shareholder-information">
+    <span class="name">test</span>
+    <span class="id">test</span>
+  </div>
+  <div class="shareholder-container">
+    <div class="external-agent">
+      <div class="external-agent--base-title">
+        <div class="external-agent--title">Agente externo</div>
+        <div class="external-agent--base">
+          Base %
+          <input type="text" value="60" />
+        </div>
+      </div>
+      <div class="external-agent--add-agent">
+        <div class="external-agent--name">
+          <label for="agent-name">Agente</label>
+          <input type="text" placeholder="Agente externo" id="agent-name" />
+        </div>
+        <div class="external-agent--commission">
+          <label for="agent-commission">% comisión</label>
+          <input type="text" placeholder="50%" id="agent-commission" />
+        </div>
+        <div class="external-agent--cta">
+          <button type="button" class="js--add-agent">
+            <i data-feather="plus" class="plus-icon"></i>
+            Agregar
+          </button>
+        </div>
+      </div>
+      <div class="external-agent--table table">
+        <table>
+          <tbody>
+            <tr>
+              <td>Banco Santa Fé</td>
+              <td>50%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="funds">
+      <div class="funds--title">Fondos</div>
+    </div>
+    <div class="officers">
+      <div class="officers--base-title">
+        <div class="officers--title">Oficiales</div>
+        <div class="officers--base">
+          Base %
+          <input type="text" value="40" />
+        </div>
+      </div>
+      <div class="officers--add-agent">
+        <div class="officers--name">
+          <label for="officer-name">Oficiales</label>
+          <input type="text" placeholder="Oficial" id="officer-name" />
+        </div>
+        <div class="officers--commission">
+          <label for="officer-commission">% comisión</label>
+          <input type="text" placeholder="50%" id="officer-commission" />
+        </div>
+        <div class="officers--cta">
+          <button type="button" class="js--add-officer">
+            <i data-feather="plus" class="plus-icon"></i>
+            Agregar
+          </button>
+        </div>
+      </div>
+      <div class="officers--table table">
+        <table>
+          <tbody>
+            <tr>
+              <td>Maganas/Tagle</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td>Restante</td>
+              <td>70%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/scripts/shareholder.js"></script>

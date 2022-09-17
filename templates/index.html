@@ -1,0 +1,34 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stonex</title>
+  <link rel="stylesheet" href="/public/assets/dist/css/index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/assets/scripts/global/feather.min.js"></script>
+  <script type="text/javascript" src="/assets/scripts/modal.js"></script>
+  <script type="text/javascript" src="/assets/scripts/index.js"></script>
+</head>
+
+<body>
+  <section id="left-section">
+    <div class="page-navbar"></div>
+  </section>
+  <section id="right-section">
+    <div class="page-header"></div>
+    <div class="container">
+      <div class="tree-routes">Home</div>
+      <div class="contentManagement"></div>
+    </div>
+  </section>
+  <div class="generic-modal"></div>
+</body>
+<script>
+  window.addEventListener("load", function (event) {
+    $(function () {
+      $(".page-header").load("header.html");
+      $(".page-navbar").load("navigationBar.html");
+      $(".generic-modal").load("/templates/global/modals/generic-modal.html");
+    });
+  });
+</script>

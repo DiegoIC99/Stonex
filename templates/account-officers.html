@@ -1,0 +1,59 @@
+<div class="employees">
+  <div class="types">
+    <div class="types--employees active">Empleados</div>
+    <div class="types--account-officers">Oficiales de cuenta</div>
+  </div>
+  <div class="actions">
+    <div class="title">Empleados</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar empleado" />
+    </div>
+    <div class="buttons">
+      <button type="button" class="new-employee">
+        <img src="/assets/icons/user-plus.png" /> Alta empleado
+      </button>
+      <button type="button" class="link-officer js--link-officer" disabled>
+        <img src="/assets/icons/link.png" /> Vincular con oficial
+      </button>
+      <button type="button" class="compare" disabled>
+        <img src="/assets/icons/users-grey.png" /> Comparar
+      </button>
+    </div>
+  </div>
+  <div class="filters"><img src="/assets/icons/filter.png" /> Filtros</div>
+  <div id="employees" class="table-employees table">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Gerencia</th>
+          <th>Legajo Bejerman</th>
+          <th>Legajo Sun</th>
+          <th>Empresa</th>
+          <th>Sector</th>
+          <th>Sueldo bruto</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pagination">
+    <a href="#" class="initial js--pagination" data-go-page="0">
+      <img src="/assets/icons/chevrons-left.png" alt="double arrows left" />
+    </a>
+    <a href="#" class="goLeft js--pagination" data-go-page="-1">
+      <img src="/assets/icons/chevron-left.png" alt="single arrow left" />
+    </a>
+    <div class="pages" data-page="0">1-1 de 1</div>
+    <a href="#" class="goRight js--pagination" data-go-page="1">
+      <img src="/assets/icons/chevron-right.png" alt="single arrow right" />
+    </a>
+    <a href="#" class="end js--pagination" data-go-page="999">
+      <img src="/assets/icons/chevrons-right.png" alt="double arrows right" />
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/scripts/employees.js"></script>

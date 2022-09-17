@@ -1,0 +1,51 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  &--overlay {
+    width: 100%;
+    background: $color-overlay;
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+  }
+  &--container {
+    background: $color-white;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: 50%;
+    width: 872px;
+    border-radius: 20px;
+    transform: translateY(-50%);
+    padding: 45px 21px 21px 35px;
+  }
+  &--title {
+    font-family: "SpaceRegular";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.62px;
+    color: $color-blue;
+    margin-bottom: 34px;
+  }
+  &--buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+    .close--modal {
+      background-color: transparent;
+      margin-right: 55px;
+      @include defaultButtons($color: $color-red);
+    }
+    .confirm--modal {
+      @include defaultButtons();
+      background-color: $color-blue;
+      padding: 10px 19.5px;
+    }
+  }
+}

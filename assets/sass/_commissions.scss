@@ -1,0 +1,35 @@
+.commissions {
+  margin-top: 22px;
+  .actions {
+    display: flex;
+    align-items: center;
+    .title {
+      color: $color-blue;
+      font-family: "SpaceRegular";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30.62px;
+      margin-right: 29px;
+    }
+    .search-bar {
+      input {
+        background-image: url(/assets/icons/search.png);
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 9px;
+        text-indent: 9px;
+        border: none;
+        padding: 11.5px 9px 11.5px 20px;
+        font-family: "SpaceRegular";
+        font-size: 13px;
+        line-height: 16.59px;
+        border-radius: 10px;
+        width: 217px;
+      }
+    }
+  }
+}
+
+.show-officers {
+  display: none;
+}

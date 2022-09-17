@@ -1,0 +1,102 @@
+.page-navbar {
+  transition: width 0.8s ease-in-out;
+  transition-delay: 0s;
+  height: 100vh;
+  width: 40px;
+}
+.nav-bar {
+  height: 100%;
+  width: 40px;
+  background-color: $color-white;
+  padding: 10px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: width 0.8s ease-in-out;
+  transition-delay: 0s;
+  z-index: $zIndexMax;
+  position: fixed;
+  top: 0;
+  overflow-y: auto;
+  &--is-open {
+    width: 252px;
+    .nav-bar--link {
+      &:hover {
+        background-color: $color-grey;
+      }
+    }
+  }
+  &--is-closed {
+    .nav-bar--link {
+      margin-right: -2px;
+      &:hover {
+        background-color: $color-grey;
+      }
+    }
+  }
+  &--logo {
+    margin-left: 12px;
+    margin-top: 25px;
+    margin-bottom: 50.9px;
+    display: flex;
+    align-items: center;
+  }
+  &--menu-icon {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  &--link {
+    display: flex;
+    align-items: center;
+    margin: 12px 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 12px;
+    margin-left: 0px;
+    transition: background-color 0.2s linear;
+    border-radius: 8px;
+    width: 235px;
+    &.is-active {
+      background-color: $color-grey;
+    }
+    p {
+      margin-left: 20px;
+      @include defaultFont13($color: $color-blue, $fontSize: 14px);
+    }
+    .navigation-icon {
+      margin-left: 8px;
+      transition: all 0.5s ease;
+      &.subnav-icon-open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .subnav-items {
+    flex-direction: column;
+    margin-left: 31px;
+    display: none;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    .subnav-link {
+      @include defaultFont13($color: $color-blue, $fontSize: 14px);
+      display: flex;
+      padding: 12px 37px 12px 19px;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      text-decoration: none;
+      &:first-child {
+        margin-top: 12px;
+      }
+      &:hover,
+      &.is-active {
+        background-color: $color-grey;
+      }
+      svg {
+        margin-right: 19px;
+      }
+    }
+    &.is-subnav-open {
+      opacity: 1;
+      display: flex;
+    }
+  }
+}

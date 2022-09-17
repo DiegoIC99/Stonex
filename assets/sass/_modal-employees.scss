@@ -1,0 +1,85 @@
+.modal-employees {
+  .add--officers {
+    display: flex;
+    margin-bottom: 36px;
+    gap: 12.56px;
+    align-items: flex-end;
+    > div {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-bottom: 9px;
+        @include defaultFont13($color: $color-grey3);
+      }
+      input {
+        border-radius: 10px;
+        border: none;
+        background-color: $color-grey8;
+        font-family: "SpaceRegular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-grey9;
+        padding: 15px;
+      }
+    }
+    .officer {
+      input {
+        width: 341.53px;
+      }
+    }
+    .base,
+    .commission {
+      input {
+        width: 136.93px;
+      }
+    }
+    .js--add-officer {
+      @include defaultButtons;
+      background-color: $color-blue;
+      padding: 8px 19.25px;
+    }
+  }
+  .selected--employees {
+    display: flex;
+    gap: 39px;
+    align-items: center;
+    margin-bottom: 26px;
+    .container {
+      @include defaultFont13;
+      cursor: pointer;
+      &.active {
+        background-color: $color-grey10;
+        border-radius: 10px;
+        padding: 10px 22px;
+      }
+    }
+  }
+}
+
+.modal--table {
+  table {
+    box-shadow: none;
+    margin-left: -35px;
+    margin-right: -21px;
+    thead {
+      tr th {
+        &:first-child {
+          padding-left: 42px;
+        }
+      }
+    }
+    tbody {
+      tr td {
+        &:first-child {
+          padding-left: 42px;
+          width: 400px;
+        }
+        &:last-child {
+          color: $color-red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

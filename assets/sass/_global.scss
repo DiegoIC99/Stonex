@@ -1,0 +1,90 @@
+.table {
+  text-align: center;
+  table {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    width: -webkit-fill-available;
+    background: $color-white;
+    border-spacing: 0;
+    thead {
+      tr {
+        th {
+          padding-top: 25px;
+          padding-bottom: 31px;
+          text-align: left;
+          @include defaultFont13($color-grey3);
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: $color-grey7;
+        }
+        td {
+          @include defaultFont13;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          &:first-child {
+            padding-left: 20px;
+            width: 40px;
+          }
+          &:last-child {
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.filters {
+  margin: 32px 0px 19px 0px;
+  text-align: right;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
+  @include defaultFont13;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  margin-right: 57px;
+  justify-content: flex-end;
+  .initial {
+    margin-right: 21px;
+  }
+  .pages {
+    @include defaultFont13;
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+  .goRight {
+    margin-right: 21px;
+  }
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  color: $color-blue;
+}
+
+.plus-icon {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+}
+
+.icon20-dark {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -2px;
+  color: $color-dark;
+}
+
+svg.filter--svg {
+  width: 11px;
+  height: 10px;
+}

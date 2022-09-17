@@ -1,0 +1,97 @@
+<div class="employees">
+  <div class="types">
+    <div class="types--employees active js--employee-type">Empleados</div>
+    <div class="types--account-officers js--employee-type">
+      Oficiales de cuenta
+    </div>
+  </div>
+  <div class="actions">
+    <div class="title">Empleados</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador" class="js--search-bar" />
+    </div>
+    <div class="buttons">
+      <button type="button" class="new-employee show-employees">
+        <i data-feather="user-plus"></i> Alta empleado
+      </button>
+      <button
+        type="button"
+        class="link-officer js--link-officer show-employees"
+        disabled
+      >
+        <i data-feather="link-2"></i> Vincular con oficial
+      </button>
+      <button type="button" class="compare show-employees" disabled>
+        <i data-feather="users"></i> Comparar
+      </button>
+      <button
+        type="button"
+        class="link-employee js--link-employee show-officers"
+        disabled
+      >
+        <i data-feather="user-plus"></i> Vincular con empleado
+      </button>
+      <button
+        type="button"
+        class="delete-officer js--delete-officer show-officers"
+        disabled
+      >
+        <i data-feather="trash"></i> Borrar
+      </button>
+    </div>
+  </div>
+  <div class="filters">
+    <i data-feather="filter" class="filter--svg"></i> Filtros
+  </div>
+  <div id="employees" class="table-employees table">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Gerencia</th>
+          <th>Legajo Bejerman</th>
+          <th>Legajo Sun</th>
+          <th>Empresa</th>
+          <th>Sector</th>
+          <th>Sueldo bruto</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div id="account-officers" class="table-account-officers table">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Origen</th>
+          <th>Nombre</th>
+          <th>Ag.</th>
+          <th>Sucursal</th>
+          <th>% base cálculo</th>
+          <th>% comisión</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="pagination">
+    <a href="#" class="initial js--pagination" data-go-page="0">
+      <i data-feather="chevrons-left" class="icons"></i>
+    </a>
+    <a href="#" class="goLeft js--pagination" data-go-page="-1">
+      <i data-feather="chevron-left" class="icons"></i>
+    </a>
+    <div class="pages" data-page="0">1-1 de 1</div>
+    <a href="#" class="goRight js--pagination" data-go-page="1">
+      <i data-feather="chevron-right" class="icons"></i>
+    </a>
+    <a href="#" class="end js--pagination" data-go-page="999">
+      <i data-feather="chevrons-right" class="icons"></i>
+    </a>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/scripts/employees.js"></script>

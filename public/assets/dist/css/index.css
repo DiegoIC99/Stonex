@@ -1,0 +1,856 @@
+@font-face {
+  font-family: "SpaceRegular";
+  src: url("/assets/fonts/SpaceGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+}
+.table {
+  text-align: center;
+}
+.table table {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: -webkit-fill-available;
+  background: #fff;
+  border-spacing: 0;
+}
+.table table thead tr th {
+  padding-top: 25px;
+  padding-bottom: 31px;
+  text-align: left;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+}
+.table table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.table table tbody tr td {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #4d4d4d;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.table table tbody tr td:first-child {
+  padding-left: 20px;
+  width: 40px;
+}
+.table table tbody tr td:last-child {
+  padding-right: 50px;
+}
+
+.filters {
+  margin: 32px 0px 19px 0px;
+  text-align: right;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #4d4d4d;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  margin-right: 57px;
+  justify-content: flex-end;
+}
+.pagination .initial {
+  margin-right: 21px;
+}
+.pagination .pages {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #4d4d4d;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+.pagination .goRight {
+  margin-right: 21px;
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  color: #123559;
+}
+
+.plus-icon {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+}
+
+.icon20-dark {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -2px;
+  color: #000000;
+}
+
+svg.filter--svg {
+  width: 11px;
+  height: 10px;
+}
+
+.page-navbar {
+  transition: width 0.8s ease-in-out;
+  transition-delay: 0s;
+  height: 100vh;
+  width: 40px;
+}
+
+.nav-bar {
+  height: 100%;
+  width: 40px;
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: width 0.8s ease-in-out;
+  transition-delay: 0s;
+  z-index: 8000;
+  position: fixed;
+  top: 0;
+  overflow-y: auto;
+}
+.nav-bar--is-open {
+  width: 252px;
+}
+.nav-bar--is-open .nav-bar--link:hover {
+  background-color: #eeeeee;
+}
+.nav-bar--is-closed .nav-bar--link {
+  margin-right: -2px;
+}
+.nav-bar--is-closed .nav-bar--link:hover {
+  background-color: #eeeeee;
+}
+.nav-bar--logo {
+  margin-left: 12px;
+  margin-top: 25px;
+  margin-bottom: 50.9px;
+  display: flex;
+  align-items: center;
+}
+.nav-bar--menu-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.nav-bar--link {
+  display: flex;
+  align-items: center;
+  margin: 12px 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  padding-left: 12px;
+  margin-left: 0px;
+  transition: background-color 0.2s linear;
+  border-radius: 8px;
+  width: 235px;
+}
+.nav-bar--link.is-active {
+  background-color: #eeeeee;
+}
+.nav-bar--link p {
+  margin-left: 20px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #123559;
+}
+.nav-bar--link .navigation-icon {
+  margin-left: 8px;
+  transition: all 0.5s ease;
+}
+.nav-bar--link .navigation-icon.subnav-icon-open {
+  transform: rotate(180deg);
+}
+.nav-bar .subnav-items {
+  flex-direction: column;
+  margin-left: 31px;
+  display: none;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+.nav-bar .subnav-items .subnav-link {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #123559;
+  display: flex;
+  padding: 12px 37px 12px 19px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.nav-bar .subnav-items .subnav-link:first-child {
+  margin-top: 12px;
+}
+.nav-bar .subnav-items .subnav-link:hover, .nav-bar .subnav-items .subnav-link.is-active {
+  background-color: #eeeeee;
+}
+.nav-bar .subnav-items .subnav-link svg {
+  margin-right: 19px;
+}
+.nav-bar .subnav-items.is-subnav-open {
+  opacity: 1;
+  display: flex;
+}
+
+.header {
+  border-bottom: 1px solid #d9d9d9;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 33px 12px 0px;
+}
+.header-container a {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.header-container .logo {
+  margin-left: 27px;
+}
+.header-container .name {
+  font-family: "SpaceRegular";
+  margin-right: 15.54px;
+  margin-left: 24px;
+}
+
+body {
+  background-color: #eeeeee;
+  margin: 0;
+}
+
+#left-section {
+  float: left;
+  margin-right: 36px;
+}
+
+#right-section .container {
+  padding: 36px 32px 36px 0px;
+  margin-left: 3.5%;
+}
+#right-section .container .tree-routes {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  line-height: 17px;
+  color: #a9a9a9;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+}
+.modal--overlay {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  z-index: 0;
+}
+.modal--container {
+  background: #fff;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: 50%;
+  width: 872px;
+  border-radius: 20px;
+  transform: translateY(-50%);
+  padding: 45px 21px 21px 35px;
+}
+.modal--title {
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  color: #123559;
+  margin-bottom: 34px;
+}
+.modal--buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+}
+.modal--buttons .close--modal {
+  background-color: transparent;
+  margin-right: 55px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #f74f4f;
+}
+.modal--buttons .confirm--modal {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 10px 19.5px;
+}
+
+.employees .types {
+  padding: 6px 8px;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+  margin-top: 24px;
+  margin-bottom: 33px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #d2d2d2;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.employees .types div {
+  cursor: pointer;
+  border-radius: 6px;
+}
+.employees .types .active {
+  background-color: #123559;
+  color: #fff;
+}
+.employees .types--employees {
+  padding: 7.5px 48.5px 7.5px 40px;
+}
+.employees .types--account-officers {
+  padding: 7.5px 10px;
+}
+.employees .actions {
+  display: flex;
+  align-items: center;
+}
+.employees .actions .title {
+  color: #123559;
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  margin-right: 29px;
+}
+.employees .actions .search-bar input {
+  background-image: url(/assets/icons/search.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 9px;
+  text-indent: 9px;
+  border: none;
+  padding: 11.5px 9px 11.5px 20px;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  line-height: 16.59px;
+  border-radius: 10px;
+  width: 217px;
+}
+.employees .actions .buttons {
+  margin-left: auto;
+}
+.employees .actions .buttons button.new-employee,
+.employees .actions .buttons button.link-employee {
+  background: #123559;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "SpaceRegular";
+  cursor: pointer;
+}
+.employees .actions .buttons button.new-employee img,
+.employees .actions .buttons button.link-employee img {
+  margin-bottom: -2px;
+  margin-right: 12px;
+}
+.employees .actions .buttons button.link-officer,
+.employees .actions .buttons button.compare {
+  background: #fff;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #295a8c;
+  padding: 10px 14px;
+}
+.employees .actions .buttons button.link-officer:disabled,
+.employees .actions .buttons button.compare:disabled {
+  color: #d2d2d2;
+  background-color: #e8e8e8;
+}
+.employees .actions .buttons button.link-officer img,
+.employees .actions .buttons button.compare img {
+  margin-right: 12px;
+}
+.employees .actions .buttons button.link-employee:disabled {
+  color: #d2d2d2;
+  background-color: #e8e8e8;
+}
+.employees .actions .buttons button.delete-officer {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding: 12px 14px;
+  background-color: #f74f4f;
+}
+.employees .actions .buttons button.delete-officer:disabled {
+  color: #d2d2d2;
+  background-color: #e8e8e8;
+}
+.employees button svg {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+}
+
+.show-officers {
+  display: none;
+}
+
+.modal-employees .add--officers {
+  display: flex;
+  margin-bottom: 36px;
+  gap: 12.56px;
+  align-items: flex-end;
+}
+.modal-employees .add--officers > div {
+  display: flex;
+  flex-direction: column;
+}
+.modal-employees .add--officers > div label {
+  margin-bottom: 9px;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+}
+.modal-employees .add--officers > div input {
+  border-radius: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  font-family: "SpaceRegular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #929292;
+  padding: 15px;
+}
+.modal-employees .add--officers .officer input {
+  width: 341.53px;
+}
+.modal-employees .add--officers .base input,
+.modal-employees .add--officers .commission input {
+  width: 136.93px;
+}
+.modal-employees .add--officers .js--add-officer {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 8px 19.25px;
+}
+.modal-employees .selected--employees {
+  display: flex;
+  gap: 39px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.modal-employees .selected--employees .container {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+.modal-employees .selected--employees .container.active {
+  background-color: #eaeaea;
+  border-radius: 10px;
+  padding: 10px 22px;
+}
+
+.modal--table table {
+  box-shadow: none;
+  margin-left: -35px;
+  margin-right: -21px;
+}
+.modal--table table thead tr th:first-child {
+  padding-left: 42px;
+}
+.modal--table table tbody tr td:first-child {
+  padding-left: 42px;
+  width: 400px;
+}
+.modal--table table tbody tr td:last-child {
+  color: #f74f4f;
+  cursor: pointer;
+}
+
+.modal-officers .add--employees {
+  display: flex;
+  margin-bottom: 36px;
+  gap: 12.56px;
+  align-items: flex-end;
+}
+.modal-officers .add--employees > div {
+  display: flex;
+  flex-direction: column;
+}
+.modal-officers .add--employees > div label {
+  margin-bottom: 9px;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+}
+.modal-officers .add--employees > div input {
+  border-radius: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  font-family: "SpaceRegular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #929292;
+  padding: 15px;
+}
+.modal-officers .add--employees .employee input {
+  width: 341.53px;
+}
+.modal-officers .add--employees .base input,
+.modal-officers .add--employees .commission input {
+  width: 136.93px;
+}
+.modal-officers .add--employees .js--add-employee {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 8px 19.25px;
+}
+.modal-officers .selected--officers {
+  display: flex;
+  gap: 39px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.modal-officers .selected--officers .container {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+.modal-officers .selected--officers .container.active {
+  background-color: #eaeaea;
+  border-radius: 10px;
+  padding: 10px 22px;
+}
+
+.modal--table table {
+  box-shadow: none;
+  margin-left: -35px;
+  margin-right: -21px;
+}
+.modal--table table thead tr th:first-child {
+  padding-left: 42px;
+}
+.modal--table table tbody tr td:first-child {
+  padding-left: 42px;
+  width: 400px;
+}
+.modal--table table tbody tr td:last-child {
+  color: #f74f4f;
+  cursor: pointer;
+}
+
+.commissions {
+  margin-top: 22px;
+}
+.commissions .actions {
+  display: flex;
+  align-items: center;
+}
+.commissions .actions .title {
+  color: #123559;
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  margin-right: 29px;
+}
+.commissions .actions .search-bar input {
+  background-image: url(/assets/icons/search.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 9px;
+  text-indent: 9px;
+  border: none;
+  padding: 11.5px 9px 11.5px 20px;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  line-height: 16.59px;
+  border-radius: 10px;
+  width: 217px;
+}
+
+.show-officers {
+  display: none;
+}
+
+.edit-shareholder .shareholder-information {
+  margin-top: 14px;
+  margin-bottom: 31px;
+}
+.edit-shareholder .shareholder-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 408px 408px;
+  grid-template-areas: "first second" "third second";
+  gap: 16px;
+}
+.edit-shareholder .shareholder-container .external-agent {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  grid-area: first;
+}
+.edit-shareholder .shareholder-container .external-agent--base-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+}
+.edit-shareholder .shareholder-container .external-agent--title {
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  color: #123559;
+}
+.edit-shareholder .shareholder-container .external-agent--base {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+  margin-left: 28px;
+}
+.edit-shareholder .shareholder-container .external-agent--base input {
+  width: 62px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 14px 10px 19px;
+  margin-left: 12px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #929292;
+}
+.edit-shareholder .shareholder-container .external-agent--name input {
+  width: 268px;
+}
+.edit-shareholder .shareholder-container .external-agent--add-agent {
+  display: flex;
+  align-items: flex-end;
+  gap: 19px;
+  margin-bottom: 35px;
+}
+.edit-shareholder .shareholder-container .external-agent--add-agent label {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+  display: block;
+  margin-bottom: 9px;
+}
+.edit-shareholder .shareholder-container .external-agent--add-agent input {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 14px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #929292;
+}
+.edit-shareholder .shareholder-container .external-agent--add-agent button {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 8px 13.75px;
+}
+.edit-shareholder .shareholder-container .external-agent--table table {
+  margin-left: -25px;
+  margin-right: -25px;
+  box-shadow: none;
+}
+.edit-shareholder .shareholder-container .external-agent--table table tbody tr td:first-child {
+  width: 65%;
+}
+.edit-shareholder .shareholder-container .officers {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  grid-area: third;
+}
+.edit-shareholder .shareholder-container .officers--base-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+}
+.edit-shareholder .shareholder-container .officers--title {
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  color: #123559;
+}
+.edit-shareholder .shareholder-container .officers--base {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+  margin-left: 28px;
+}
+.edit-shareholder .shareholder-container .officers--base input {
+  width: 62px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 14px 10px 19px;
+  margin-left: 12px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #929292;
+}
+.edit-shareholder .shareholder-container .officers--name input {
+  width: 268px;
+}
+.edit-shareholder .shareholder-container .officers--add-agent {
+  display: flex;
+  align-items: flex-end;
+  gap: 19px;
+  margin-bottom: 35px;
+}
+.edit-shareholder .shareholder-container .officers--add-agent label {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+  display: block;
+  margin-bottom: 9px;
+}
+.edit-shareholder .shareholder-container .officers--add-agent input {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 14px;
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #929292;
+}
+.edit-shareholder .shareholder-container .officers--add-agent button {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 8px 13.75px;
+}
+.edit-shareholder .shareholder-container .officers--table table {
+  margin-left: -25px;
+  margin-right: -25px;
+  box-shadow: none;
+}
+.edit-shareholder .shareholder-container .officers--table table tbody tr td:first-child {
+  width: 65%;
+}
+.edit-shareholder .shareholder-container .funds {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  grid-area: second;
+}/*# sourceMappingURL=index.css.map */

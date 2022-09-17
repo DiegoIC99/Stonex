@@ -1,0 +1,68 @@
+<div class="modal-employees">
+  <div class="add--officers">
+    <div class="officer">
+      <label for="officer">Oficial</label>
+      <input type="text" placeholder="Nombre del oficial" id="officer" />
+    </div>
+    <div class="base">
+      <label for="base">% base cálculo</label>
+      <input type="text" placeholder="Base cálculo" id="base" />
+    </div>
+    <div class="commission">
+      <label for="commission">% comisión</label>
+      <input type="text" placeholder="Comisión" id="commission" />
+    </div>
+    <button type="button" class="js--add-officer">
+      <i data-feather="plus" class="plus-icon"></i>
+      Agregar
+    </button>
+  </div>
+  <div class="selected--employees">
+    <div class="container active" data-employee-id="1">
+      Col. Roderick Decker
+    </div>
+    <div class="container" data-employee-id="2">Dr. Bonnie Barstow</div>
+  </div>
+  <div class="modal--table table modal--table-employees">
+    <table>
+      <thead>
+        <tr>
+          <th>Oficial</th>
+          <th>% base cálculo</th>
+          <th>% comisión</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dori Doreau</td>
+          <td>100</td>
+          <td>30</td>
+          <td><a>Eliminar</a></td>
+        </tr>
+        <tr>
+          <td>Willie Tanner</td>
+          <td>100</td>
+          <td>30</td>
+          <td><a>Eliminar</a></td>
+        </tr>
+        <tr>
+          <td>Mike Torello</td>
+          <td>100</td>
+          <td>30</td>
+          <td><a>Eliminar</a></td>
+        </tr>
+        <tr>
+          <td>Kate Tanner</td>
+          <td>100</td>
+          <td>30</td>
+          <td><a>Eliminar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  feather.replace();
+</script>

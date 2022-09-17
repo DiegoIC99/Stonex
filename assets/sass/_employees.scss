@@ -1,0 +1,112 @@
+.employees {
+  .types {
+    padding: 6px 8px;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+    margin-top: 24px;
+    margin-bottom: 33px;
+    width: fit-content;
+    display: flex;
+    @include defaultFont13($color: $color-grey4, $fontSize: 14px);
+    border-radius: 10px;
+    background-color: $color-white;
+    div {
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .active {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+    &--employees {
+      padding: 7.5px 48.5px 7.5px 40px;
+    }
+    &--account-officers {
+      padding: 7.5px 10px;
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    .title {
+      color: $color-blue;
+      font-family: "SpaceRegular";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30.62px;
+      margin-right: 29px;
+    }
+    .search-bar {
+      input {
+        background-image: url(/assets/icons/search.png);
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 9px;
+        text-indent: 9px;
+        border: none;
+        padding: 11.5px 9px 11.5px 20px;
+        font-family: "SpaceRegular";
+        font-size: 13px;
+        line-height: 16.59px;
+        border-radius: 10px;
+        width: 217px;
+      }
+    }
+    .buttons {
+      margin-left: auto;
+      button.new-employee,
+      button.link-employee {
+        background: $color-blue;
+        border-radius: 8px;
+        color: #fff;
+        border: none;
+        padding: 10px 14px;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: "SpaceRegular";
+        cursor: pointer;
+        img {
+          margin-bottom: -2px;
+          margin-right: 12px;
+        }
+      }
+      button.link-officer,
+      button.compare {
+        background: $color-white;
+        @include defaultButtons($color: $color-blue2);
+        padding: 10px 14px;
+        &:disabled {
+          color: $color-grey4;
+          background-color: $color-grey5;
+        }
+        img {
+          margin-right: 12px;
+        }
+      }
+      button.link-employee {
+        &:disabled {
+          color: $color-grey4;
+          background-color: $color-grey5;
+        }
+      }
+      button.delete-officer {
+        @include defaultButtons();
+        padding: 12px 14px;
+        background-color: $color-red;
+        &:disabled {
+          color: $color-grey4;
+          background-color: $color-grey5;
+        }
+      }
+    }
+  }
+
+  button svg {
+    width: 15px;
+    height: 15px;
+    margin-bottom: -2px;
+  }
+}
+
+.show-officers {
+  display: none;
+}

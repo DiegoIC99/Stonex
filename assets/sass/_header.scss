@@ -1,0 +1,22 @@
+.header {
+  border-bottom: 1px solid $color-grey2;
+  &-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 33px 12px 0px;
+    a {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+    }
+    .logo {
+      margin-left: 27px;
+    }
+    .name {
+      font-family: "SpaceRegular";
+      margin-right: 15.54px;
+      margin-left: 24px;
+    }
+  }
+}

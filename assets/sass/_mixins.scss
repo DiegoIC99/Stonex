@@ -1,0 +1,26 @@
+@mixin defaultButtons($color: $color-white, $fontSize: 14px) {
+  font-family: "SpaceRegular";
+  font-size: $fontSize;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: $color;
+}
+
+@mixin defaultFont13($color: $color-grey6, $fontSize: 13px) {
+  font-family: "SpaceRegular";
+  font-size: $fontSize;
+  font-weight: 400;
+  line-height: 17px;
+  color: $color;
+}
+
+@mixin shareHolderContainer() {
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+}
