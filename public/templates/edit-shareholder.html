@@ -41,7 +41,15 @@
     <div class="funds">
       <div class="funds--title">Fondos</div>
       <div class="funds--search">
-        <input type="text" placeholder="Buscar" class="search-funds" />
+        <div class="funds--container">
+          <input type="text" placeholder="Buscar" class="search-funds" />
+          <div id="results-funds">
+            <div>Test result one</div>
+            <div>Test result one</div>
+            <div>Test result one</div>
+            <div>Test result one</div>
+          </div>
+        </div>
         <select name="filter-funds" id="filter-funds">
           <option value="all">Ver todos</option>
           <option value="agents">Agentes</option>
@@ -56,7 +64,7 @@
               <th>Ofi/Ag</th>
               <th>Base</th>
               <th>%</th>
-              <th class="js--edit-fund"></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -64,15 +72,23 @@
               <td>GAINVEST BALANCEADO I</td>
               <td>Maganas/Tagle</td>
               <td>70</td>
-              <td><input type="text" /></td>
-              <td><i data-feather="edit" class="icons"></i></td>
+              <td><input type="text" class="funds--input-percent" /></td>
+              <td>
+                <a href="#" class="funds--edit-percent"
+                  ><i data-feather="edit" class="icons"></i
+                ></a>
+              </td>
             </tr>
             <tr>
               <td>GAINVEST BALANCEADO II</td>
               <td>Maganas/Tagle</td>
               <td>70</td>
-              <td><input type="text" /></td>
-              <td><i data-feather="edit" class="icons"></i></td>
+              <td><input type="text" class="funds--input-percent" /></td>
+              <td>
+                <a href="#" class="funds--edit-percent"
+                  ><i data-feather="edit" class="icons"></i
+                ></a>
+              </td>
             </tr>
           </tbody>
         </table>

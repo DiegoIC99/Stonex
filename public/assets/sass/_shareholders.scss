@@ -52,21 +52,30 @@
           @include defaultFont13($color: $color-grey9, $fontSize: 14px);
         }
       }
+
       &--name {
         input {
-          width: 268px;
+          width: 230px;
+
+          @include bp-up(1300px) {
+            width: 268px;
+          }
         }
       }
+
       &--add-agent {
         display: flex;
         align-items: flex-end;
         gap: 19px;
         margin-bottom: 35px;
+        flex-wrap: wrap;
+
         label {
           @include defaultFont13($color: $color-grey3);
           display: block;
           margin-bottom: 9px;
         }
+
         input {
           background-color: $color-grey8;
           border-radius: 10px;
@@ -74,17 +83,20 @@
           padding: 10px 14px;
           @include defaultFont13($color: $color-grey9, $fontSize: 14px);
         }
+
         button {
           @include defaultButtons;
           background-color: $color-blue;
           padding: 8px 13.75px;
         }
       }
+
       &--table {
         table {
           margin-left: -25px;
           margin-right: -25px;
           box-shadow: none;
+
           tbody tr td {
             &:first-child {
               width: 65%;
@@ -122,21 +134,30 @@
           @include defaultFont13($color: $color-grey9, $fontSize: 14px);
         }
       }
+
       &--name {
         input {
-          width: 268px;
+          width: 230px;
+
+          @include bp-up(1300px) {
+            width: 268px;
+          }
         }
       }
+
       &--add-agent {
         display: flex;
         align-items: flex-end;
         gap: 19px;
         margin-bottom: 35px;
+        flex-wrap: wrap;
+
         label {
           @include defaultFont13($color: $color-grey3);
           display: block;
           margin-bottom: 9px;
         }
+
         input {
           background-color: $color-grey8;
           border-radius: 10px;
@@ -144,17 +165,20 @@
           padding: 10px 14px;
           @include defaultFont13($color: $color-grey9, $fontSize: 14px);
         }
+
         button {
           @include defaultButtons;
           background-color: $color-blue;
           padding: 8px 13.75px;
         }
       }
+
       &--table {
         table {
           margin-left: -25px;
           margin-right: -25px;
           box-shadow: none;
+
           tbody tr td {
             &:first-child {
               width: 65%;
@@ -167,41 +191,97 @@
     .funds {
       @include shareHolderContainer;
       grid-area: second;
+
       &--title {
         @include shareHolderTitle;
         margin-bottom: 20px;
       }
+
       &--search {
-        .search-funds {
-          background-color: $color-grey8;
-          border-radius: 10px;
-          padding: 7px 9px 7px 20px;
-          width: 323px;
-          border: none;
-          background-image: url(/assets/icons/search.png);
-          background-repeat: no-repeat;
-          background-position-y: center;
-          background-position-x: 9px;
-          text-indent: 9px;
-          @include defaultFont13($color: $color-grey11);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 19px;
+
+        .funds--container {
+          width: 100%;
+          position: relative;
+          .search-funds {
+            background-color: $color-grey8;
+            border-radius: 10px;
+            padding: 7px 9px 7px 20px;
+            width: 100%;
+            border: none;
+            background-image: url(/assets/icons/search.png);
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 9px;
+            text-indent: 9px;
+            @include defaultFont13($color: $color-grey11);
+          }
+          #results-funds {
+            position: absolute;
+            background: $color-grey8;
+            width: 100%;
+            padding: 0px 0px 0px 29px;
+            box-sizing: border-box;
+            top: 24px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: none;
+            div {
+              @include defaultFont13($color: $color-dark1, $fontSize: 14px);
+              margin-bottom: 30px;
+              margin-top: 30px;
+              cursor: pointer;
+            }
+          }
         }
+
         #filter-funds {
+          width: 166px;
+          background: $color-grey8;
+          border-radius: 10px;
+          border: none;
+          padding: 8px 9px;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+          background-repeat: no-repeat;
+          background-position: right 1rem center;
+          background-size: 1em;
         }
       }
+
       &--table {
         table {
           margin-left: -25px;
           margin-right: -25px;
           box-shadow: none;
+
           thead tr th {
             &:first-child {
               padding-left: 20px;
             }
           }
+
           tbody tr td {
             &:first-child {
               width: auto;
             }
+
+            &:last-child {
+              text-align: right;
+            }
+          }
+
+          input.funds--input-percent {
+            width: 30px;
+            border-radius: 8px;
+            border: 0px;
+            background: $color-grey10;
+            padding: 6px 6px 6px 8px;
           }
         }
       }

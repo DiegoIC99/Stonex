@@ -17,10 +17,10 @@ function navigationLinks() {
     $(".navigation-icon").removeClass("subnav-icon-open");
   });
 
-  $onPressEmployeesLink.on("click touchend", (e) =>
+  $onPressEmployeesLink.on("click touchstart", (e) =>
     navigateBetweenScreens(EMPLOYEES_LINK, e, "employees")
   );
-  $onPressCommissionsLink.on("click touchend", (e) =>
+  $onPressCommissionsLink.on("click touchstart", (e) =>
     navigateBetweenScreens(COMMISSIONS_LINK, e, "commissions")
   );
 

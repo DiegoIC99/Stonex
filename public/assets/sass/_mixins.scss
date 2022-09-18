@@ -24,3 +24,38 @@
   padding: 25px;
   box-sizing: border-box;
 }
+
+// Targets specified width and up
+@mixin bp-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Targets everything below specified width, but not at the specified width
+@mixin bp-below($width) {
+  @media (max-width: $width - 0.063rem) {
+    @content;
+  }
+}
+
+// Targets specified width and below
+@mixin bp-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// Targets everything above specified width, but not at the specified width
+@mixin bp-above($width) {
+  @media (min-width: $width + 0.063rem) {
+    @content;
+  }
+}
+
+// Targets everything between two specified width
+@mixin bp-between($minWidth, $maxWidth) {
+  @media (min-width: $minWidth) and (max-width: $maxWidth) {
+    @content;
+  }
+}
