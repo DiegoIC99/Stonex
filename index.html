@@ -5,9 +5,9 @@
   <title>Stonex</title>
   <link rel="stylesheet" href="/public/assets/dist/css/index.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="/assets/scripts/global/feather.min.js"></script>
-  <script type="text/javascript" src="/assets/scripts/modal.js"></script>
-  <script type="text/javascript" src="/assets/scripts/index.js"></script>
+  <script src="/public/assets/scripts/global/feather.min.js"></script>
+  <script type="text/javascript" src="/public/assets/scripts/modal.js"></script>
+  <script type="text/javascript" src="/public/assets/scripts/index.js"></script>
 </head>
 
 <body>
@@ -26,9 +26,11 @@
 <script>
   window.addEventListener("load", function (event) {
     $(function () {
-      $(".page-header").load("./templates/header.html");
-      $(".page-navbar").load("./templates/navigationBar.html");
-      $(".generic-modal").load("/templates/global/modals/generic-modal.html");
+      $(".page-header").load("/public/templates/header.html");
+      $(".page-navbar").load("/public/templates/navigationBar.html");
+      $(".generic-modal").load(
+        "/public/templates/global/modals/generic-modal.html"
+      );
     });
   });
 </script>

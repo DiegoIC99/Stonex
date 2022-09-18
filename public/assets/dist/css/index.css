@@ -1,6 +1,6 @@
 @font-face {
   font-family: "SpaceRegular";
-  src: url("/assets/fonts/SpaceGrotesk-Regular.woff") format("woff");
+  src: url("/public/assets/fonts/SpaceGrotesk-Regular.woff") format("woff");
   font-weight: 400;
 }
 .table {
@@ -368,7 +368,7 @@ button {
   margin-right: 29px;
 }
 .employees .actions .search-bar input {
-  background-image: url(/assets/icons/search.png);
+  background-image: url(/public/assets/icons/search.png);
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 9px;
@@ -635,7 +635,7 @@ button {
   margin-right: 29px;
 }
 .commissions .actions .search-bar input {
-  background-image: url(/assets/icons/search.png);
+  background-image: url(/public/assets/icons/search.png);
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 9px;
