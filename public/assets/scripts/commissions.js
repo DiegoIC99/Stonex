@@ -137,7 +137,7 @@ function onShareHolderPress(e) {
   localStorage.setItem("shareHolderDataId", shareHolderDataId);
 
   // Redirect to the shareholder edit page.
-  $(".contentManagement").load("/templates/edit-shareholder.html");
+  $(".contentManagement").load("templates/edit-shareholder.html");
 }
 
 preLoadFunctionsAndListeners();

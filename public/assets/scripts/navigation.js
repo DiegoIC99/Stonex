@@ -1,5 +1,5 @@
-const EMPLOYEES_LINK = "/public/templates/employees.html";
-const COMMISSIONS_LINK = "/public/templates/commissions.html";
+const EMPLOYEES_LINK = "templates/employees.html";
+const COMMISSIONS_LINK = "templates/commissions.html";
 
 function navigationLinks() {
   const $onPressEmployeesLink = $(".link--employees");
@@ -36,7 +36,7 @@ function navigationLinks() {
     if ($(".subnav-items").hasClass("is-subnav-open")) {
       $(".page-navbar, .nav-bar.nav-sidebar").addClass("nav-bar--is-open");
     }
-    $contentManagement.load(`/public/templates/${getRoute}.html`);
+    $contentManagement.load(`templates/${getRoute}.html`);
   }
 }
 

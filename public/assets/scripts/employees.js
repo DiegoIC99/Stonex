@@ -183,7 +183,7 @@ function linkEmployeesWithOfficers() {
   const modalToShow = $(".generic-modal");
   showModal(modalToShow, {
     title: "Vincular con oficial",
-    content: "/templates/modal-employees.html",
+    content: "templates/modal-employees.html",
     confirmTextButton: "Guardar cambios",
     cancelTextButton: "Cancelar",
   });
@@ -193,7 +193,7 @@ function linkOfficersWithEmployees() {
   const modalToShow = $(".generic-modal");
   showModal(modalToShow, {
     title: "Vincular con empleado",
-    content: "/templates/modal-officers.html",
+    content: "templates/modal-officers.html",
     confirmTextButton: "Guardar cambios",
     cancelTextButton: "Cancelar",
   });
