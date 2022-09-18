@@ -652,6 +652,9 @@ button {
   border-radius: 10px;
   width: 217px;
 }
+.commissions .js--shareholder {
+  cursor: pointer;
+}
 
 .show-officers {
   display: none;
@@ -660,6 +663,12 @@ button {
 .edit-shareholder .shareholder-information {
   margin-top: 14px;
   margin-bottom: 31px;
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  color: #123559;
+  font-weight: 400;
 }
 .edit-shareholder .shareholder-container {
   display: grid;
@@ -857,4 +866,40 @@ button {
   padding: 25px;
   box-sizing: border-box;
   grid-area: second;
+}
+.edit-shareholder .shareholder-container .funds--title {
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.62px;
+  color: #123559;
+  margin-bottom: 20px;
+}
+.edit-shareholder .shareholder-container .funds--search .search-funds {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 7px 9px 7px 20px;
+  width: 323px;
+  border: none;
+  background-image: url(/assets/icons/search.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 9px;
+  text-indent: 9px;
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #555555;
+}
+.edit-shareholder .shareholder-container .funds--table table {
+  margin-left: -25px;
+  margin-right: -25px;
+  box-shadow: none;
+}
+.edit-shareholder .shareholder-container .funds--table table thead tr th:first-child {
+  padding-left: 20px;
+}
+.edit-shareholder .shareholder-container .funds--table table tbody tr td:first-child {
+  width: auto;
 }/*# sourceMappingURL=index.css.map */

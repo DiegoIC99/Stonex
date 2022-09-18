@@ -1,7 +1,6 @@
 <div class="edit-shareholder">
   <div class="shareholder-information">
-    <span class="name">test</span>
-    <span class="id">test</span>
+    <span class="name">GENEIA | Nro. 67888</span>
   </div>
   <div class="shareholder-container">
     <div class="external-agent">
@@ -41,15 +40,43 @@
     </div>
     <div class="funds">
       <div class="funds--title">Fondos</div>
-      <div class="search-founds">
-        <input type="text" placeholder="Buscar" />
+      <div class="funds--search">
+        <input type="text" placeholder="Buscar" class="search-funds" />
         <select name="filter-funds" id="filter-funds">
           <option value="all">Ver todos</option>
           <option value="agents">Agentes</option>
           <option value="officers">Oficiales</option>
         </select>
       </div>
-      <div class="results-funds"></div>
+      <div class="funds--table table">
+        <table>
+          <thead>
+            <tr>
+              <th>Fondo</th>
+              <th>Ofi/Ag</th>
+              <th>Base</th>
+              <th>%</th>
+              <th class="js--edit-fund"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GAINVEST BALANCEADO I</td>
+              <td>Maganas/Tagle</td>
+              <td>70</td>
+              <td><input type="text" /></td>
+              <td><i data-feather="edit" class="icons"></i></td>
+            </tr>
+            <tr>
+              <td>GAINVEST BALANCEADO II</td>
+              <td>Maganas/Tagle</td>
+              <td>70</td>
+              <td><input type="text" /></td>
+              <td><i data-feather="edit" class="icons"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="officers">
       <div class="officers--base-title">
