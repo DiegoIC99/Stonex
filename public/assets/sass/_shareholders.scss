@@ -252,6 +252,22 @@
           background-position: right 1rem center;
           background-size: 1em;
         }
+
+        .cross-delete {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $color-grey6;
+          cursor: pointer;
+          display: none;
+          &.is-active {
+            display: block;
+          }
+          a {
+            color: $color-grey6;
+          }
+        }
       }
 
       &--table {
@@ -285,6 +301,26 @@
           }
         }
       }
+    }
+  }
+
+  .shareholder--buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 18px;
+    margin-right: -16px;
+    .js--save-changes {
+      @include defaultButtons();
+      background-color: $color-blue;
+      padding: 10px 19.5px;
+    }
+    .js--apply-all {
+      @include defaultButtons();
+      background-color: $color-white;
+      color: $color-blue2;
+      padding: 10px 19.5px;
     }
   }
 }

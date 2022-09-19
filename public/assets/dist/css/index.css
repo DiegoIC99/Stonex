@@ -952,6 +952,21 @@ button {
   background-position: right 1rem center;
   background-size: 1em;
 }
+.edit-shareholder .shareholder-container .funds--search .cross-delete {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4d4d4d;
+  cursor: pointer;
+  display: none;
+}
+.edit-shareholder .shareholder-container .funds--search .cross-delete.is-active {
+  display: block;
+}
+.edit-shareholder .shareholder-container .funds--search .cross-delete a {
+  color: #4d4d4d;
+}
 .edit-shareholder .shareholder-container .funds--table table {
   margin-left: -25px;
   margin-right: -25px;
@@ -972,4 +987,89 @@ button {
   border: 0px;
   background: #eaeaea;
   padding: 6px 6px 6px 8px;
+}
+.edit-shareholder .shareholder--buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 18px;
+  margin-right: -16px;
+}
+.edit-shareholder .shareholder--buttons-container .js--save-changes {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #123559;
+  padding: 10px 19.5px;
+}
+.edit-shareholder .shareholder--buttons-container .js--apply-all {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #fff;
+  color: #295a8c;
+  padding: 10px 19.5px;
+}
+
+.modal-apply-all .search-sh--container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 31px;
+}
+.modal-apply-all .search-sh--container label {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #a9a9a9;
+}
+.modal-apply-all .search-sh--container input {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #929292;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  width: 362px;
+  border: none;
+}
+.modal-apply-all .results-sh--container .apply-all--table table {
+  box-shadow: none;
+  margin-left: -35px;
+  margin-right: -21px;
+}
+.modal-apply-all .results-sh--container .apply-all--table table tbody tr td:first-child {
+  padding-left: 38px;
+  width: auto;
+}
+.modal-apply-all .results-sh--container .apply-all--table table tbody tr td:last-child {
+  text-align: right;
+}
+.modal-apply-all .results-sh--container .apply-all--table table tbody tr td a.js--delete-applied-sh {
+  font-family: "SpaceRegular";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #f74f4f;
+}
+.modal-apply-all .results-sh--title {
+  font-family: "SpaceRegular";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #123559;
+  width: 255px;
+  margin-bottom: 12px;
 }/*# sourceMappingURL=index.css.map */

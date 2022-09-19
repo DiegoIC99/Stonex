@@ -9,8 +9,10 @@ function showModal(referencedElement, config = {}, callback = null) {
   const $this = referencedElement;
   const $modalTitle = $this.find(".modal--title");
   const $modalContent = $this.find(".modal--content");
+  const $modalContainer = $this.find(".modal--container");
   const $modalConfirmButton = $this.find(".js--confirm");
   const $modalCloseButton = $this.find(".js--cancel");
+  console.log(config);
 
   // Add listeners
   $modalCloseButton.unbind().bind("click", () => onCloseModal($this));
@@ -30,6 +32,10 @@ function showModal(referencedElement, config = {}, callback = null) {
 
     if (config?.closeTextButton && config?.closeTextButton !== "") {
       $modalCloseButton.html(config.closeTextButton);
+    }
+
+    if (config?.styles && config?.styles !== "") {
+      $modalContainer.css(config.styles);
     }
   }
 
