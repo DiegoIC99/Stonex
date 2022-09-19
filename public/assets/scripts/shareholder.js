@@ -14,6 +14,7 @@ function preLoadFunctionsAndListeners() {
   $deleteSearch.on("click", onDeleteSearch);
   $saveChanges.on("click", onSaveChanges);
   $applyAll.on("click", onApplyAll);
+  $(document).on("click", onClickListenerOutsideBaseInput);
 
   // Calls
   feather.replace();
@@ -26,7 +27,7 @@ function onEditPercentPressed(e) {
   const $target = $(e.currentTarget);
   const $basePercentInput = $target.closest("tr").find(".funds--input-percent");
 
-  $basePercentInput.focus();
+  $basePercentInput.attr("disabled", false).focus();
 }
 
 function onSearch(e) {
@@ -68,6 +69,11 @@ function onApplyAll(e) {
     cancelTextButton: "Cancelar",
     styles: { width: "404px" },
   });
+}
+
+function onClickListenerOutsideBaseInput(event) {
+  const $target = $(event.target);
+  $(".funds--input-percent").attr("disabled", true);
 }
 
 preLoadFunctionsAndListeners();
