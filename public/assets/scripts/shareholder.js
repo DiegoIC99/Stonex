@@ -7,10 +7,12 @@ function preLoadFunctionsAndListeners() {
   const $deleteSearch = $(".js--delete-search");
   const $saveChanges = $(".js--save-changes");
   const $applyAll = $(".js--apply-all");
+  const $searchShareholders = $(".js--search-shareholders");
 
   // Listeners
   $editPercentFunds.on("click", onEditPercentPressed);
   $searchOnFocus.on("keyup", onSearch);
+  $(document).on("keyup", $searchShareholders, onSearchShareholders);
   $deleteSearch.on("click", onDeleteSearch);
   $saveChanges.on("click", onSaveChanges);
   $applyAll.on("click", onApplyAll);
@@ -39,6 +41,16 @@ function onSearch(e) {
   } else {
     $("#results-funds").fadeIn();
     $(".cross-delete").addClass("is-active");
+  }
+}
+
+function onSearchShareholders(e) {
+  const $target = $(e.target);
+
+  if ($target.val() === "") {
+    $(".results-shareholders--search").fadeOut();
+  } else {
+    $(".results-shareholders--search").fadeIn();
   }
 }
 

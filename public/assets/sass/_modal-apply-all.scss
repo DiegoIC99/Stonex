@@ -4,16 +4,35 @@
     flex-direction: column;
     gap: 9px;
     margin-bottom: 31px;
+    position: relative;
     label {
       @include defaultFont13($color: $color-grey3);
     }
     input {
       @include defaultFont13($color: $color-grey9, $fontSize: 14px);
-      padding: 15px;
+      padding: 15px 25px;
       border-radius: 10px;
       background-color: $color-grey8;
       width: 362px;
       border: none;
+    }
+    .results-shareholders--search {
+      position: absolute;
+      background: $color-grey8;
+      width: 362px;
+      padding: 0px 25px 25px 25px;
+      box-sizing: border-box;
+      top: 65px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: none;
+      div {
+        @include defaultFont13($color: $color-dark1, $fontSize: 14px);
+        margin-top: 14px;
+        cursor: pointer;
+        border-top: 1px solid $color-grey12;
+        padding-top: 10px;
+      }
     }
   }
   .results-sh {

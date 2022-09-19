@@ -1024,6 +1024,7 @@ button {
   flex-direction: column;
   gap: 9px;
   margin-bottom: 31px;
+  position: relative;
 }
 .modal-apply-all .search-sh--container label {
   font-family: "SpaceRegular";
@@ -1038,11 +1039,33 @@ button {
   font-weight: 400;
   line-height: 17px;
   color: #929292;
-  padding: 15px;
+  padding: 15px 25px;
   border-radius: 10px;
   background-color: #f5f5f5;
   width: 362px;
   border: none;
+}
+.modal-apply-all .search-sh--container .results-shareholders--search {
+  position: absolute;
+  background: #f5f5f5;
+  width: 362px;
+  padding: 0px 25px 25px 25px;
+  box-sizing: border-box;
+  top: 65px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: none;
+}
+.modal-apply-all .search-sh--container .results-shareholders--search div {
+  font-family: "SpaceRegular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #1c1c1c;
+  margin-top: 14px;
+  cursor: pointer;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 10px;
 }
 .modal-apply-all .results-sh--container .apply-all--table table {
   box-shadow: none;
