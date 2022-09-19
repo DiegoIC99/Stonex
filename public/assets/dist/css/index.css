@@ -989,10 +989,8 @@ button {
   padding: 6px 6px 6px 8px;
 }
 .edit-shareholder .shareholder--buttons-container {
-  display: flex;
+  text-align: right;
   align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
   margin-top: 18px;
   margin-right: -16px;
 }
@@ -1006,6 +1004,7 @@ button {
   color: #fff;
   background-color: #123559;
   padding: 10px 19.5px;
+  margin-right: 12px;
 }
 .edit-shareholder .shareholder--buttons-container .js--apply-all {
   font-family: "SpaceRegular";

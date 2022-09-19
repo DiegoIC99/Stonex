@@ -305,16 +305,15 @@
   }
 
   .shareholder--buttons-container {
-    display: flex;
+    text-align: right;
     align-items: center;
-    justify-content: flex-end;
-    gap: 16px;
     margin-top: 18px;
     margin-right: -16px;
     .js--save-changes {
       @include defaultButtons();
       background-color: $color-blue;
       padding: 10px 19.5px;
+      margin-right: 12px;
     }
     .js--apply-all {
       @include defaultButtons();
