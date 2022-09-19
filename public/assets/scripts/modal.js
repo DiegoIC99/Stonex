@@ -12,7 +12,6 @@ function showModal(referencedElement, config = {}, callback = null) {
   const $modalContainer = $this.find(".modal--container");
   const $modalConfirmButton = $this.find(".js--confirm");
   const $modalCloseButton = $this.find(".js--cancel");
-  console.log(config);
 
   // Add listeners
   $modalCloseButton.unbind().bind("click", () => onCloseModal($this));

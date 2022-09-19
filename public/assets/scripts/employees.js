@@ -186,6 +186,7 @@ function linkEmployeesWithOfficers() {
     content: "templates/modal-employees.html",
     confirmTextButton: "Guardar cambios",
     cancelTextButton: "Cancelar",
+    styles: { width: "872px" },
   });
 }
 
@@ -196,6 +197,7 @@ function linkOfficersWithEmployees() {
     content: "templates/modal-officers.html",
     confirmTextButton: "Guardar cambios",
     cancelTextButton: "Cancelar",
+    styles: { width: "872px" },
   });
 }
 
